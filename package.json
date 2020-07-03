@@ -4,7 +4,8 @@
   "workspaces": ["packages/*"],
   "scripts": {
       "start:auth":"yarn workspace auth start",
-      "test:auth":"yarn workspace auth test"
+      "test:auth":"yarn workspace auth test",
+      "dev:client": "yarn workspace client dev"
   },
   "version": "1.0.0",
   "main": "index.js",
