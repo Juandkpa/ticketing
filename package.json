@@ -5,7 +5,8 @@
   "scripts": {
       "start:auth":"yarn workspace auth start",
       "test:auth":"yarn workspace auth test",
-      "dev:client": "yarn workspace client dev"
+      "dev:client": "yarn workspace client dev",
+      "common:build": "yarn workspace common build"
   },
   "version": "1.0.0",
   "main": "index.js",

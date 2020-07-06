@@ -7,22 +7,25 @@ deploy:
 build:
   local:
     push: false
+    useDockerCLI: true
 #   googleCloudBuild:
 #     projectId: ticketing-dev-281319
   artifacts:
     - image: juandkpa/auth
-      context: packages/auth
       docker:
         dockerfile: Dockerfile
+        target: auth
+        buildArgs:
+          artifact: 'auth'
       sync:
         manual:
-          - src: 'src/**/*.ts'
+          - src: 'packages/auth/src/**/*.ts'
             dest: .
     - image: juandkpa/client
-      context: packages/client
       docker:
         dockerfile: Dockerfile
+        target: client
       sync:
         manual:
-          - src: '**/*.js'
+          - src: 'packages/client/**/*.js'
             dest: .
