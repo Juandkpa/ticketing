@@ -6,6 +6,7 @@
       "start:auth":"yarn workspace auth start",
       "start:tickets": "yarn workspace tickets start",
       "test:auth":"yarn workspace auth test",
+      "test:tickets": "yarn workspace tickets test",
       "dev:client": "yarn workspace client dev",
       "common:build": "yarn workspace common build"
   },
