@@ -15,8 +15,6 @@ build:
       docker:
         dockerfile: Dockerfile
         target: auth
-        buildArgs:
-          artifact: 'auth'
       sync:
         manual:
           - src: 'packages/auth/src/**/*.ts'
@@ -28,4 +26,12 @@ build:
       sync:
         manual:
           - src: 'packages/client/**/*.js'
+            dest: .
+    - image: juandkpa/tickets
+      docker:
+        dockerfile: Dockerfile
+        target: tickets
+      sync:
+        manual:
+          - src: 'packages/tickets/src/**/*.ts'
             dest: .

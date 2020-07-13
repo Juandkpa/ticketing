@@ -4,6 +4,7 @@
   "workspaces": ["packages/*"],
   "scripts": {
       "start:auth":"yarn workspace auth start",
+      "start:tickets": "yarn workspace tickets start",
       "test:auth":"yarn workspace auth test",
       "dev:client": "yarn workspace client dev",
       "common:build": "yarn workspace common build"

@@ -12,6 +12,12 @@ RUN yarn --prod
 COPY packages/auth/ ./packages/auth/
 CMD ["yarn", "start:auth"]
 
+FROM shared as tickets
+COPY packages/tickets/package.json ./packages/tickets/
+RUN yarn --prod
+COPY packages/tickets/ ./packages/tickets/
+CMD ["yarn", "start:tickets"]
+
 FROM base as client
 COPY packages/client/package.json ./packages/client/
 RUN yarn
