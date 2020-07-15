@@ -8,7 +8,7 @@
       "test:auth":"yarn workspace auth test",
       "test:tickets": "yarn workspace tickets test",
       "dev:client": "yarn workspace client dev",
-      "common:build": "yarn workspace common build"
+      "build:common": "yarn workspace common build"
   },
   "version": "1.0.0",
   "main": "index.js",
