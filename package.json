@@ -5,8 +5,10 @@
   "scripts": {
       "start:auth":"yarn workspace auth start",
       "start:tickets": "yarn workspace tickets start",
+      "start:orders": "yarn workspace orders start",
       "test:auth":"yarn workspace auth test",
       "test:tickets": "yarn workspace tickets test",
+      "test:orders": "yarn workspace orders test",
       "dev:client": "yarn workspace client dev",
       "build:common": "yarn workspace common build"
   },

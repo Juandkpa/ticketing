@@ -35,3 +35,11 @@ build:
         manual:
           - src: 'packages/tickets/src/**/*.ts'
             dest: .
+    - image: juandkpa/orders
+      docker:
+        dockerfile: Dockerfile
+        target: orders
+      sync:
+        manual:
+          - src: 'packages/orders/src/**/*.ts'
+            dest: .

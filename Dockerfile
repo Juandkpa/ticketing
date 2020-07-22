@@ -18,6 +18,13 @@ RUN yarn --prod
 COPY packages/tickets/ ./packages/tickets/
 CMD ["yarn", "start:tickets"]
 
+FROM shared as orders
+COPY packages/orders/package.json ./packages/orders/
+RUN yarn --prod
+COPY packages/orders/ ./packages/orders/
+CMD ["yarn", "start:orders"]
+
+
 FROM base as client
 COPY packages/client/package.json ./packages/client/
 RUN yarn
