@@ -43,3 +43,11 @@ build:
         manual:
           - src: 'packages/orders/src/**/*.ts'
             dest: .
+    - image: juandkpa/expiration
+      docker:
+        dockerfile: Dockerfile
+        target: expiration
+      sync:
+        manual:
+          - src: 'packages/expiration/src/**/*.ts'
+            dest: .

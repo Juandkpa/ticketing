@@ -24,6 +24,12 @@ RUN yarn --prod
 COPY packages/orders/ ./packages/orders/
 CMD ["yarn", "start:orders"]
 
+FROM shared as expiration
+COPY packages/expiration/package.json ./packages/expiration/
+RUN yarn --prod
+COPY packages/expiration/ ./packages/expiration/
+CMD ["yarn", "start:expiration"]
+
 
 FROM base as client
 COPY packages/client/package.json ./packages/client/
