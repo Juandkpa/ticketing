@@ -51,3 +51,11 @@ build:
         manual:
           - src: 'packages/expiration/src/**/*.ts'
             dest: .
+    - image: juandkpa/payments
+      docker:
+        dockerfile: Dockerfile
+        target: payments
+      sync:
+        manual:
+          - src: 'packages/payments/src/**/*.ts'
+            dest: .

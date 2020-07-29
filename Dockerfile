@@ -24,6 +24,12 @@ RUN yarn --prod
 COPY packages/orders/ ./packages/orders/
 CMD ["yarn", "start:orders"]
 
+FROM shared as payments
+COPY packages/payments/ ./packages/payments/
+RUN yarn --prod
+COPY packages/payments/ ./packages/payments/
+CMD ["yarn", "start:payments"]
+
 FROM shared as expiration
 COPY packages/expiration/package.json ./packages/expiration/
 RUN yarn --prod
